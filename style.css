@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: #e8edf2;
+}
+
+#menu-fix {
+    z-index: -1;
+    position: fixed;
+    margin-top: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#menu-fix ul {
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    margin: 0;
+    justify-content: space-around;
+}
+
+
+.container-form {
+    grid-area: formulario;
+    padding: 2%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    gap: 12px;
+}
+
+.container-form label>input {
+    width: 100%;
+    border-radius: 10px;
+    border-color: rgb(0, 166, 199);
+}
+
+.container-form #add-Producto,
+.container-form #actualiza-Producto {
+    background-color: rgb(255, 255, 255);
+}
+
+button {
+    border-radius: 10px;
+    border: rgb(232, 232, 232) 2px solid;
+}
+
+#add-Category button {
+    background-color: rgb(255, 255, 255);
+}
+
+#add-Category button:hover,
+.container-form #add-Producto:hover {
+    background-color: rgb(6, 79, 250);
+    cursor: pointer;
+    border: rgb(5, 5, 5) 1px solid;
+    color: #f4f4f4;
+}
+
+.container-form #actualiza-Producto:hover:not(:disabled) {
+    background-color: rgb(6, 79, 250);
+    cursor: pointer;
+    border: rgb(5, 5, 5) 1px solid;
+    color: #f4f4f4;
+}
+
+.delt-btn {
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 0, 0, 0.55);
+}
+
+.delt-btn:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+.edit-btn {
+    color: rgba(0, 0, 0, 0.568);
+    background-color: rgb(127, 255, 212);
+}
+
+.edit-btn:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(1, 255, 170);
+    cursor: pointer;
+}
+
+
+
+#vista-container {
+    grid-area: vista;
+}
+
+.grid-container {
+
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-row: auto;
+    grid-template-areas:
+        'formulario'
+        'vista'
+    ;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+
+td {
+    border: 1px navy solid;
+    border-collapse: collapse;
+
+}
+
+/* ID */
+tr:nth-child(even) {
+    background-color: #d7d7f7ef;
+}
+
+
+
+th:nth-child(1) {
+    width: 5%;
+}
+
+/* Nombre */
+th:nth-child(2) {
+    width: 25%;
+}
+
+/* Precio */
+th:nth-child(3) {
+    width: 10%;
+}
+
+/* Categoria */
+th:nth-child(4) {
+    width: 20%;
+}
+
+/* Categoria */
+th:nth-child(5) {
+    width: 20%;
+}
+
+
+#head-productos {
+    background-color: rgb(2, 116, 145);
+    color: rgb(255, 255, 255);
+}
+
+#head-productos tr th {
+    border: 1px solid rgb(78, 80, 79);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(124, 120, 120);
+}
+
+.btn.show {
+    display: none;
+}

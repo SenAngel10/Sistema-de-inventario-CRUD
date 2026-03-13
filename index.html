@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inventario</title>
+</head>
+
+<body>
+
+    <nav id="menu-fix">
+        <ul class="navigation">
+            <li>Home</li>
+        </ul>
+    </nav>
+
+    <div class="grid-container">
+        <section id="formulario-container" class="container-form">
+            <label>Busca: <br><input type="text" id="search-producto"></label>
+            <label>Nombre: <br><input type="text" id="name-producto"></label>
+            <label>Precio: <br><input type="number" id="precio-producto"></label>
+            <label>Categoria:<br>
+                <select name="opcion" id="categoria-producto">
+
+                </select>
+                <div id="add-Category" style="display: inline;">
+                    <button id="editar">+</button>
+                </div>
+            </label>
+            <label>Cantidad: <br><input type="number" id="cant-producto"> </label>
+
+            <button id="add-Producto">Agregar</button>
+            <button id="actualiza-Producto">Actualizar</button>
+            <label>Filtra:
+                <select type="opcion" id="filtro-ctgy">
+
+                </select>
+            </label>
+        </section>
+
+        <section id="tabla-container" class="container-table">
+            <table>
+                <thead id="head-productos">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Categoria</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody id="body-productos">
+
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="app.js" defer></script>
+
+</body>
+
+</html>
